@@ -1,0 +1,16 @@
+def is_prime(tn):
+    if (tn % 2 == 0 and tn != 2) or tn == 1:
+        print("Not prime")
+        return
+    for i in range(3, int(tn ** 1/2), 2):
+        if (tn % i == 0):
+            print("Not prime")
+            return
+    print("Prime")
+    return
+
+n = int(input())
+
+for i in range(n):
+    tn = int(input())
+    is_prime(tn)
